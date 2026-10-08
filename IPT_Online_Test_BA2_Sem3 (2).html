@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Indian Political Thought — Online Test (B.A. II, Sem III)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F4F7; --sheet:#FFFFFF; --ink:#1B2A47; --ink-soft:#4A5872; --rule:#C9D0DC;
+  --line:#E5E9F0; --accent:#B8441B; --accent-ink:#FFFFFF; --ok:#1F7A4D; --bad:#A8322A;
+  --ok-bg:#E6F4EC; --bad-bg:#FBE9E7; --focus:#2D5BD1;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#14181F; --sheet:#1C222C; --ink:#EAEEF5; --ink-soft:#B2BBCC; --rule:#3A4556; --line:#2B3442;
+  --ok-bg:#163826; --bad-bg:#3E1E1B; --ok:#6CC995; --bad:#F0877D; }}
+:root[data-theme="dark"]{
+  --paper:#14181F; --sheet:#1C222C; --ink:#EAEEF5; --ink-soft:#B2BBCC; --rule:#3A4556; --line:#2B3442;
+  --ok-bg:#163826; --bad-bg:#3E1E1B; --ok:#6CC995; --bad:#F0877D; }
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Martel","Noto Serif Devanagari","Kohinoor Devanagari",Georgia,serif;font-size:17px;line-height:1.75}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 80px}
+.sheet{background:var(--sheet);border:1px solid var(--rule);border-radius:4px;padding:28px 28px 32px;box-shadow:0 1px 0 var(--rule)}
+@media (max-width:600px){.sheet{padding:20px 16px 24px}}
+.titleblock{text-align:center;border-bottom:2px solid var(--ink);padding-bottom:14px;margin-bottom:18px}
+.titleblock .inst{font-weight:800;font-size:1.05rem;letter-spacing:.01em}
+.titleblock .paper{font-size:1.35rem;font-weight:800;margin:4px 0 2px}
+.titleblock .sub{color:var(--ink-soft);font-size:.95rem}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 18px;font-size:.95rem;border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:18px}
+.meta b{font-weight:600}
+.instr{font-size:.95rem;color:var(--ink-soft);margin:0 0 18px;padding-left:18px}
+.instr li{margin:2px 0}
+label.f{display:block;font-weight:600;margin:12px 0 4px}
+input[type=text]{width:100%;font:inherit;font-size:1rem;padding:9px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet);color:var(--ink)}
+input[type=text]:focus,button:focus-visible,.opt:focus-within{outline:2px solid var(--focus);outline-offset:2px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+@media (max-width:600px){.row2{grid-template-columns:1fr}}
+button{font:inherit;cursor:pointer;border-radius:4px;border:1px solid var(--ink);background:var(--sheet);color:var(--ink);padding:10px 18px;font-weight:600}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.timerbar{position:sticky;top:0;z-index:5;background:var(--ink);color:#fff;padding:10px 16px;margin:-28px -28px 20px;border-radius:4px 4px 0 0;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+@media (max-width:600px){.timerbar{margin:-20px -16px 16px}}
+.timerbar .t{font-size:1.5rem;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.timerbar .t.warn{color:#FFB38A}
+.timerbar .who{font-size:.9rem;opacity:.9}
+.q{border-top:1px solid var(--line);padding:16px 0 12px}
+.q:first-of-type{border-top:0}
+.qh{display:flex;gap:10px;align-items:baseline}
+.qn{min-width:34px;font-weight:800;color:var(--ink-soft)}
+.qt{font-weight:600;display:flex;flex-direction:column;gap:2px}
+.qt .hi{font-weight:400;color:var(--ink-soft)}
+.hio{color:var(--ink-soft)}
+.marks{margin-left:auto;font-size:.85rem;color:var(--ink-soft);white-space:nowrap}
+.opts{list-style:none;margin:8px 0 0 34px;padding:0;display:grid;gap:6px}
+@media (max-width:600px){.opts{margin-left:0}}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;border:1px solid var(--line);border-radius:4px;cursor:pointer}
+.opt:hover{border-color:var(--rule)}
+.opt input{margin-top:7px;accent-color:var(--accent)}
+.opt.ok{background:var(--ok-bg);border-color:var(--ok)}
+.opt.bad{background:var(--bad-bg);border-color:var(--bad)}
+.opt .l{font-weight:600;min-width:1.4em}
+.hidden{display:none !important}
+.score{border:2px solid var(--ink);padding:18px 20px;margin:0 0 20px;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center}
+.score .big{font-size:2.6rem;font-weight:800;line-height:1.1;grid-row:span 3}
+.score .k{color:var(--ink-soft);font-size:.9rem}
+.note{font-size:.95rem;color:var(--ink-soft)}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.85rem;word-break:break-all;background:var(--paper);border:1px dashed var(--rule);padding:10px 12px;border-radius:4px;user-select:all}
+.saved{font-size:.95rem;margin:8px 0 0}
+.saved.ok{color:var(--ok)} .saved.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:10px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--ink-soft)}
+.tablewrap{overflow-x:auto}
+textarea{width:100%;font:inherit;font-size:.9rem;min-height:90px;padding:9px 12px;border:1px solid var(--rule);border-radius:4px;background:var(--sheet);color:var(--ink)}
+.tlink{font-size:.85rem;color:var(--ink-soft);text-align:right;margin-top:16px}
+.tlink button{border:0;padding:0;background:none;color:var(--ink-soft);text-decoration:underline;font-weight:400}
+h2{font-size:1.25rem;margin:0 0 6px}
+.pill{display:inline-block;font-size:.8rem;padding:1px 8px;border:1px solid var(--rule);border-radius:999px;color:var(--ink-soft);margin-left:6px}
+@media (prefers-reduced-motion:no-preference){.opt{transition:border-color .15s}}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="sheet" id="sheet">
+
+<!-- ===== ENTRY ===== -->
+<section id="entry">
+  <div class="titleblock">
+    <div class="inst">Institute of Excellence in Higher Education (IEHE), Bhopal</div>
+    <div class="paper">Indian Political Thought (भारतीय राजनीतिक चिंतन)</div>
+    <div class="sub">B.A. II Year — Semester III — Online Objective Test (वस्तुनिष्ठ परीक्षा)</div>
+  </div>
+  <div class="meta">
+    <span><b>Time (समय):</b> 40 Minutes</span>
+    <span><b>Questions (प्रश्न):</b> 16</span>
+    <span><b>Total Marks (पूर्णांक):</b> 8</span>
+    <span><b>Each question:</b> ½ mark</span>
+  </div>
+  <ul class="instr">
+    <li>All questions are compulsory. Each question has four options; only one is correct. No negative marking.<br>सभी प्रश्न अनिवार्य हैं। प्रत्येक प्रश्न के चार विकल्प हैं, केवल एक सही है। कोई negative marking नहीं है।</li>
+    <li>The 40-minute timer starts when you press "Start Test". Answers are submitted automatically when time is over.<br>"Start Test" दबाते ही 40 मिनट का timer चालू हो जाएगा। समय पूरा होने पर उत्तर स्वतः submit हो जाएँगे।</li>
+    <li>Your timer and answers are saved even if the page refreshes. Each student may attempt the test only once.<br>Page refresh होने पर भी timer और उत्तर सुरक्षित रहेंगे। एक छात्र केवल एक बार परीक्षा दे सकता है।</li>
+    <li>After submitting you will see your score, the correct answers and a <b>Result Code</b> — you must send that code to the professor.<br>Submit के बाद आपको score, सही उत्तर और एक <b>Result Code</b> दिखेगा — वह code प्राध्यापक को भेजना अनिवार्य है।</li>
+  </ul>
+  <div class="row2">
+    <div><label class="f" for="name">Student Name (छात्र का नाम)</label><input type="text" id="name" autocomplete="name" placeholder="e.g. Priya Sharma"></div>
+    <div><label class="f" for="roll">Roll No. (अनुक्रमांक)</label><input type="text" id="roll" placeholder="e.g. 2305A1234"></div>
+  </div>
+  <label class="f" for="cls">Class / Section (कक्षा / वर्ग)</label>
+  <input type="text" id="cls" placeholder="e.g. B.A. II Year, Sem III, Section A">
+  <div class="actions">
+    <button class="primary" id="startBtn">Start Test (परीक्षा शुरू करें)</button>
+    <span class="note" id="entryMsg"></span>
+  </div>
+  <div class="tlink"><button id="teacherLink" class="hidden">Professor Panel (प्राध्यापक पैनल)</button></div>
+</section>
+
+<!-- ===== TEST ===== -->
+<section id="test" class="hidden">
+  <div class="timerbar">
+    <div class="who" id="who"></div>
+    <div class="t" id="timer">40:00</div>
+  </div>
+  <div class="meta"><span><b>Indian Political Thought</b> — B.A. II, Sem III</span><span>16 × ½ = 8 marks</span><span id="answeredCount">0 / 16 answered</span></div>
+  <form id="qform"></form>
+  <div class="actions">
+    <button class="primary" id="submitBtn">Submit (उत्तर जमा करें)</button>
+    <span class="note">Answers cannot be changed after submitting. / Submit के बाद उत्तर बदले नहीं जा सकेंगे।</span>
+  </div>
+</section>
+
+<!-- ===== RESULT ===== -->
+<section id="result" class="hidden">
+  <div class="titleblock">
+    <div class="inst">Result (परीक्षा परिणाम)</div>
+    <div class="paper" id="rName"></div>
+    <div class="sub" id="rMeta"></div>
+  </div>
+  <div class="score">
+    <div class="big" id="rScore"></div>
+    <div><span class="k">Correct (सही):</span> <span id="rCorrect"></span></div>
+    <div><span class="k">Wrong / Unattempted (गलत / अनुत्तरित):</span> <span id="rWrong"></span></div>
+    <div><span class="k">Time taken (समय):</span> <span id="rTime"></span></div>
+  </div>
+  <p id="savedMsg" class="saved"></p>
+  <h2>Result Code <span class="pill">Send to professor / प्राध्यापक को भेजें</span></h2>
+  <p class="note">Copy this code and send it to the professor on WhatsApp. It contains your name, roll no., score and answers.<br>यह code copy करके प्राध्यापक को WhatsApp पर भेजें। इसमें आपका नाम, roll no., score और उत्तर सुरक्षित हैं।</p>
+  <div class="code" id="rCode"></div>
+  <div class="actions"><button id="copyBtn">Copy Code (कॉपी करें)</button><span class="note" id="copyMsg"></span></div>
+  <h2 style="margin-top:26px">Answer Review (उत्तर-समीक्षा)</h2>
+  <div id="review"></div>
+  <div class="tlink"><button id="teacherLink2" class="hidden">Professor Panel (प्राध्यापक पैनल)</button></div>
+</section>
+
+<!-- ===== TEACHER ===== -->
+<section id="teacher" class="hidden">
+  <div class="titleblock">
+    <div class="inst">Professor Panel (प्राध्यापक पैनल)</div>
+    <div class="paper">Indian Political Thought — Results</div>
+    <div class="sub">B.A. II Year, Semester III · Objective Test · MM 8</div>
+  </div>
+  <h2>1. स्वतः सुरक्षित परिणाम (Auto-saved results)</h2>
+  <p class="note" id="dbMsg">लोड हो रहा है…</p>
+  <h2 style="margin-top:22px">2. Result Codes से जोड़ें (Paste codes)</h2>
+  <p class="note">छात्रों से प्राप्त Result Codes नीचे paste करें — एक पंक्ति में एक code (या कई codes space/comma से अलग)।</p>
+  <textarea id="codes" placeholder="IPT-…"></textarea>
+  <div class="actions"><button id="parseBtn">Codes जोड़ें</button><span class="note" id="parseMsg"></span></div>
+  <h2 style="margin-top:22px">3. मार्क-सूची (Marks list)</h2>
+  <div class="tablewrap"><table id="rtable"><thead><tr><th>#</th><th>Name</th><th>Roll No.</th><th>Class</th><th>Marks / 8</th><th>Correct</th><th>Time</th><th>Submitted</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+  <div class="actions"><button class="primary" id="csvBtn">CSV Download करें</button><button id="itemBtn">प्रश्नवार विश्लेषण (Item analysis)</button><button id="backBtn">वापस (Back)</button><button id="resetBtn">इस device पर परीक्षा reset करें</button></div>
+  <div id="items"></div>
+</section>
+
+</div></div>
+
+<script>
+// ---------- Question bank (source: course fact sheet; Manu → Nehru) ----------
+const DURATION_MS = 40*60*1000;
+const MARK = 0.5;
+const Q = [
+ {e:"According to Manu, the institution of Kingship is justified as a remedy for which condition?", h:"मनु के अनुसार राजा (राजत्व) की संस्था किस स्थिति के उपचार के रूप में उचित ठहराई गई है?",
+  o:[["Social Contract","सामाजिक अनुबंध"],["Matsyanyaya","मत्स्य-न्याय"],["Class Struggle","वर्ग संघर्ष"],["Divine Right","दैवी अधिकार"]],a:1},
+ {e:"Modern scholars generally date the present Manava-Dharmashastra (Manusmriti) to —", h:"आधुनिक विद्वान वर्तमान मानव-धर्मशास्त्र (मनुस्मृति) को प्रायः किस काल में रखते हैं?",
+  o:[["c. 6th century BCE","लगभग छठी शताब्दी ई.पू."],["c. 2nd century CE","लगभग दूसरी शताब्दी ई."],["c. 8th century CE","लगभग आठवीं शताब्दी ई."],["c. 12th century CE","लगभग बारहवीं शताब्दी ई."]],a:1},
+ {e:"In the Saptanga Theory, what does 'Kosha' mean?", h:"सप्तांग सिद्धांत में 'कोश' का अर्थ क्या है?",
+  o:[["Ally","मित्र"],["Fort","दुर्ग"],["Treasury","राजकोष"],["Army","सेना"]],a:2},
+ {e:"In the Shadgunya (six-fold policy), 'Asana' means —", h:"षाड्गुण्य नीति में 'आसन' का अर्थ है —",
+  o:[["Neutrality","तटस्थता"],["War","युद्ध"],["Marching","यान (सैन्य अभियान)"],["Seeking alliance","संश्रय"]],a:0},
+ {e:"Which of the following is <u>not</u> one of Kautilya's four Upayas?", h:"निम्न में से कौन कौटिल्य के चार उपायों में शामिल <u>नहीं</u> है?",
+  o:[["Sama","साम"],["Dana","दान"],["Bheda","भेद"],["Yana","यान"]],a:3},
+ {e:"In the Mandala Doctrine, who is the 'Vijigishu'?", h:"मंडल सिद्धांत में 'विजिगीषु' कौन है?",
+  o:[["The would-be conqueror","विजय का इच्छुक राजा"],["The enemy's ally","शत्रु का मित्र"],["The chief minister","प्रधान अमात्य"],["The neutral king","उदासीन राजा"]],a:0},
+ {e:"In which year did Raja Ram Mohan Roy found the Brahmo Sabha?", h:"राजा राममोहन राय ने ब्रह्म सभा की स्थापना किस वर्ष की?",
+  o:[["1815","1815"],["1828","1828"],["1830","1830"],["1833","1833"]],a:1},
+ {e:"Which of the following newspapers is associated with Raja Ram Mohan Roy?", h:"निम्न में से कौन-सा समाचार-पत्र राजा राममोहन राय से जुड़ा है?",
+  o:[["Kesari","केसरी"],["Young India","यंग इंडिया"],["Sambad Kaumudi","संवाद कौमुदी"],["The Mahratta","द मराठा"]],a:2},
+ {e:"Which event in September 1893 brought Swami Vivekananda international fame?", h:"सितम्बर 1893 की किस घटना से स्वामी विवेकानंद को अंतर्राष्ट्रीय ख्याति मिली?",
+  o:[["Congress of Vienna","वियना कांग्रेस"],["World's Parliament of Religions, Chicago","विश्व धर्म संसद, शिकागो"],["Round Table Conference, London","गोलमेज सम्मेलन, लंदन"],["Theosophical Convention, Adyar","थियोसोफिकल सम्मेलन, अड्यार"]],a:1},
+ {e:"The idea of 'Practical Vedanta' — linking spirituality with service — is associated with which thinker?", h:"'व्यावहारिक वेदांत' — आध्यात्मिकता को सेवा से जोड़ने का विचार — किस विचारक से जुड़ा है?",
+  o:[["Raja Ram Mohan Roy","राजा राममोहन राय"],["Bal Gangadhar Tilak","बाल गंगाधर तिलक"],["Swami Vivekananda","स्वामी विवेकानंद"],["Jawaharlal Nehru","जवाहरलाल नेहरू"]],a:2},
+ {e:"Where did Bal Gangadhar Tilak write most of the 'Gita Rahasya'?", h:"बाल गंगाधर तिलक ने 'गीता रहस्य' का अधिकांश भाग कहाँ लिखा?",
+  o:[["Yerwada Jail, Pune","यरवदा जेल, पुणे"],["Mandalay Jail, Burma","मांडले जेल, बर्मा"],["Ahmednagar Fort","अहमदनगर किला"],["Cellular Jail, Andaman","सेल्युलर जेल, अंडमान"]],a:1},
+ {e:"When did Tilak found his Home Rule League?", h:"तिलक ने अपनी होम रूल लीग की स्थापना कब की?",
+  o:[["December 1905","दिसम्बर 1905"],["August 1908","अगस्त 1908"],["April 1916","अप्रैल 1916"],["August 1920","अगस्त 1920"]],a:2},
+ {e:"In which year was Gandhi's 'Hind Swaraj' written?", h:"गांधी की कृति 'हिन्द स्वराज' किस वर्ष लिखी गई?",
+  o:[["1906","1906"],["1909","1909"],["1917","1917"],["1930","1930"]],a:1},
+ {e:"Which analogy did Gandhi use to explain the relation between means and ends?", h:"गांधी ने साधन और साध्य के संबंध को किस उपमा से समझाया?",
+  o:[["Seed and Tree","बीज और वृक्ष"],["River and Sea","नदी और सागर"],["Lamp and Light","दीपक और प्रकाश"],["Body and Soul","शरीर और आत्मा"]],a:0},
+ {e:"Jawaharlal Nehru presided over which Congress session where Purna Swaraj was declared the goal?", h:"जवाहरलाल नेहरू ने किस कांग्रेस अधिवेशन की अध्यक्षता की, जहाँ पूर्ण स्वराज को लक्ष्य घोषित किया गया?",
+  o:[["Calcutta, 1928","कलकत्ता, 1928"],["Lahore, 1929","लाहौर, 1929"],["Karachi, 1931","कराची, 1931"],["Lucknow, 1936","लखनऊ, 1936"]],a:1},
+ {e:"When and where was the first summit of the Non-Aligned Movement held, in which Nehru participated?", h:"गुटनिरपेक्ष आंदोलन का पहला शिखर सम्मेलन, जिसमें नेहरू ने भाग लिया, कब और कहाँ हुआ?",
+  o:[["Bandung, 1955","बांडुंग, 1955"],["Belgrade, 1961","बेलग्रेड, 1961"],["Cairo, 1964","काहिरा, 1964"],["Lusaka, 1970","लुसाका, 1970"]],a:1},
+];
+const L = ["A","B","C","D"];
+const qText=q=>`<span class="en">${q.e}</span><span class="hi">${q.h}</span>`;
+const oText=o=>o[0]===o[1]?esc(o[0]):`${esc(o[0])} <span class="hio">/ ${esc(o[1])}</span>`;
+const KEY = "ipt_sem3_test_v2";
+
+// ---------- helpers ----------
+const $ = s=>document.querySelector(s);
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||"null"); }catch(e){ return null; } }
+function save(s){ try{ localStorage.setItem(KEY, JSON.stringify(s)); }catch(e){} }
+function show(id){ ["entry","test","result","teacher"].forEach(i=>$("#"+i).classList.toggle("hidden", i!==id)); window.scrollTo({top:0}); }
+function fmt(ms){ ms=Math.max(0,ms); const m=Math.floor(ms/60000), s=Math.floor(ms%60000/1000); return String(m).padStart(2,"0")+":"+String(s).padStart(2,"0"); }
+function score(ans){ let c=0; Q.forEach((q,i)=>{ if(ans[i]===q.a) c++; }); return c; }
+function encode(r){ return "IPT-"+btoa(unescape(encodeURIComponent(JSON.stringify(r)))).replace(/=+$/,""); }
+function decode(code){
+  const m=String(code).trim().match(/^IPT-([A-Za-z0-9+/]+)$/); if(!m) return null;
+  try{ const r=JSON.parse(decodeURIComponent(escape(atob(m[1])))); if(!r||typeof r.n!=="string"||!Array.isArray(r.a)) return null; r.c=score(r.a); r.s=r.c*MARK; return r; }catch(e){ return null; }
+}
+function fmtDate(ts){ try{ return new Date(ts).toLocaleString("en-IN",{dateStyle:"medium",timeStyle:"short"}); }catch(e){ return String(ts); } }
+
+// ---------- state ----------
+let state = load() || {phase:"entry"};
+let tick = null;
+let claudeUser=null, claudeDb=null, claudeDl=null;
+
+// ---------- entry ----------
+$("#startBtn").addEventListener("click", ()=>{
+  const n=$("#name").value.trim(), r=$("#roll").value.trim(), c=$("#cls").value.trim();
+  if(!n||!r){ $("#entryMsg").textContent="Please enter Name and Roll No. / कृपया नाम और Roll No. भरें।"; return; }
+  state={phase:"test", n, r, cls:c, start:Date.now(), ans:Array(Q.length).fill(null)};
+  save(state); startTest();
+});
+
+// ---------- test ----------
+function renderQuestions(){
+  const f=$("#qform"); f.innerHTML="";
+  Q.forEach((q,i)=>{
+    const d=document.createElement("div"); d.className="q";
+    d.innerHTML=`<div class="qh"><span class="qn">Q${i+1}.</span><span class="qt">${qText(q)}</span><span class="marks">½</span></div>
+      <ul class="opts">${q.o.map((o,j)=>`<li><label class="opt"><input type="radio" name="q${i}" value="${j}" ${state.ans[i]===j?"checked":""}><span class="l">(${L[j]})</span><span>${oText(o)}</span></label></li>`).join("")}</ul>`;
+    f.appendChild(d);
+  });
+  f.addEventListener("change", e=>{
+    if(e.target.name&&e.target.name.startsWith("q")){ state.ans[+e.target.name.slice(1)]=+e.target.value; save(state); updateCount(); }
+  });
+  updateCount();
+}
+function updateCount(){ const n=state.ans.filter(a=>a!==null).length; $("#answeredCount").textContent=`${n} / ${Q.length} answered`; }
+function startTest(){
+  show("test");
+  $("#who").textContent=`${state.n} · Roll ${state.r}${state.cls?" · "+state.cls:""}`;
+  renderQuestions();
+  const t=$("#timer");
+  const run=()=>{ const left=state.start+DURATION_MS-Date.now(); t.textContent=fmt(left); t.classList.toggle("warn", left<5*60*1000);
+    if(left<=0){ clearInterval(tick); finish(true); } };
+  run(); tick=setInterval(run,500);
+}
+$("#submitBtn").addEventListener("click", ()=>{
+  const un=state.ans.filter(a=>a===null).length;
+  if(un>0 && !confirm(`${un} question(s) unanswered. Submit anyway?\n${un} प्रश्न अनुत्तरित हैं। क्या आप फिर भी submit करना चाहते हैं?`)) return;
+  clearInterval(tick); finish(false);
+});
+async function finish(auto){
+  state.phase="result"; state.end=Date.now(); state.auto=auto; save(state);
+  renderResult(); await persist();
+}
+
+// ---------- result ----------
+function record(){
+  return {n:state.n, r:state.r, cls:state.cls||"", a:state.ans, start:state.start, end:state.end, c:score(state.ans), s:score(state.ans)*MARK, auto:!!state.auto};
+}
+function renderResult(){
+  show("result");
+  const rec=record();
+  $("#rName").textContent=rec.n;
+  $("#rMeta").textContent=`Roll ${rec.r}${rec.cls?" · "+rec.cls:""} · ${fmtDate(rec.end)}${rec.auto?" · (Time over — auto-submitted / समय समाप्त)":""}`;
+  $("#rScore").textContent=`${rec.s} / 8`;
+  $("#rCorrect").textContent=`${rec.c} / ${Q.length}`;
+  $("#rWrong").textContent=`${Q.length-rec.c}`;
+  $("#rTime").textContent=fmt(Math.min(DURATION_MS, rec.end-rec.start));
+  $("#rCode").textContent=encode({n:rec.n,r:rec.r,cls:rec.cls,a:rec.a,start:rec.start,end:rec.end,auto:rec.auto});
+  const rv=$("#review"); rv.innerHTML="";
+  Q.forEach((q,i)=>{
+    const g=rec.a[i];
+    const d=document.createElement("div"); d.className="q";
+    d.innerHTML=`<div class="qh"><span class="qn">Q${i+1}.</span><span class="qt">${qText(q)}</span><span class="marks">${g===q.a?"✓ ½":"✗ 0"}</span></div>
+      <ul class="opts">${q.o.map((o,j)=>`<li><div class="opt ${j===q.a?"ok":(j===g?"bad":"")}"><span class="l">(${L[j]})</span><span>${oText(o)}${j===q.a?" — Correct answer / सही उत्तर":(j===g?" — Your answer / आपका उत्तर":"")}</span></div></li>`).join("")}</ul>`;
+    rv.appendChild(d);
+  });
+}
+$("#copyBtn").addEventListener("click", async ()=>{
+  const c=$("#rCode").textContent;
+  try{ await navigator.clipboard.writeText(c); $("#copyMsg").textContent="Copied ✓ / Copy हो गया"; }
+  catch(e){ const r=document.createRange(); r.selectNodeContents($("#rCode")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $("#copyMsg").textContent="Text select हो गया — Ctrl+C दबाएँ"; }
+});
+async function persist(){
+  const msg=$("#savedMsg");
+  if(!claudeDb||!claudeUser){ msg.className="saved bad"; msg.textContent="Result could not be auto-saved — you MUST send the Result Code below to the professor. / परिणाम स्वतः save नहीं हुआ — नीचे दिया Result Code प्राध्यापक को अवश्य भेजें।"; return; }
+  try{
+    const id=await claudeUser.id(); if(!id) throw {code:"no_id"};
+    await claudeDb.collection("results").doc(id).set(record());
+    state.saved=true; save(state);
+    msg.className="saved ok"; msg.textContent="Result auto-saved with the professor ✓ — still send the Result Code. / परिणाम स्वतः save हो गया, फिर भी Result Code भेज दें।";
+  }catch(e){ msg.className="saved bad"; msg.textContent="Result could not be auto-saved — you MUST send the Result Code below to the professor. / परिणाम स्वतः save नहीं हुआ — नीचे दिया Result Code प्राध्यापक को अवश्य भेजें।"; }
+}
+
+// ---------- teacher ----------
+let rows=[];
+function addRows(list, src){
+  list.forEach(r=>{ if(!r) return; const k=(r.r||"")+"|"+(r.n||"")+"|"+(r.end||"");
+    if(!rows.some(x=>x._k===k)) rows.push({...r, _k:k, src}); });
+  renderTable();
+}
+function renderTable(){
+  const tb=$("#rtable tbody"); tb.innerHTML="";
+  rows.sort((a,b)=>(a.cls||"").localeCompare(b.cls||"")||String(a.r).localeCompare(String(b.r),undefined,{numeric:true}));
+  rows.forEach((r,i)=>{ const tr=document.createElement("tr");
+    tr.innerHTML=`<td>${i+1}</td><td>${esc(r.n)}</td><td>${esc(r.r)}</td><td>${esc(r.cls||"")}</td><td><b>${r.s}</b></td><td>${r.c}/${Q.length}</td><td>${fmt(Math.min(DURATION_MS,(r.end||0)-(r.start||0)))}</td><td>${r.end?fmtDate(r.end):""}${r.auto?" (auto)":""}</td><td>${r.src}</td>`;
+    tb.appendChild(tr); });
+  if(!rows.length){ tb.innerHTML=`<tr><td colspan="9" class="note">अभी कोई परिणाम नहीं।</td></tr>`; }
+}
+$("#parseBtn").addEventListener("click", ()=>{
+  const codes=$("#codes").value.split(/[\s,;]+/).filter(Boolean);
+  let ok=0, bad=0; const got=[];
+  codes.forEach(c=>{ const r=decode(c); if(r){ok++; got.push(r);} else bad++; });
+  addRows(got,"code"); $("#parseMsg").textContent=`${ok} code जुड़े${bad?`, ${bad} अमान्य`:""}।`;
+  if(ok) $("#codes").value="";
+});
+$("#csvBtn").addEventListener("click", async ()=>{
+  const head=["S.No.","Name","Roll No.","Class","Marks (out of 8)","Correct (out of 16)","Time taken","Submitted at","Auto-submitted","Source",...Q.map((_,i)=>"Q"+(i+1))];
+  const lines=[head].concat(rows.map((r,i)=>[i+1,r.n,r.r,r.cls||"",r.s,r.c,fmt(Math.min(DURATION_MS,(r.end||0)-(r.start||0))),r.end?fmtDate(r.end):"",r.auto?"yes":"no",r.src,...Q.map((q,j)=>r.a[j]==null?"-":(r.a[j]===q.a?"1":"0"))]));
+  const csv="\uFEFF"+lines.map(l=>l.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const name="IPT_Sem3_Objective_Results.csv";
+  if(claudeDl){ try{ await claudeDl.save({filename:name,data:new Blob([csv],{type:"text/csv"})}); return; }catch(e){ if(e&&e.code==="declined") return; } }
+  // fallback: select-all text for copy
+  const w=window.open("","_blank"); if(w){ w.document.write("<pre>"+esc(csv)+"</pre>"); } else { alert("Download उपलब्ध नहीं — CSV text:\n\n"+csv); }
+});
+$("#itemBtn").addEventListener("click", ()=>{
+  const box=$("#items"); if(!rows.length){ box.innerHTML="<p class='note'>पहले परिणाम जोड़ें।</p>"; return; }
+  box.innerHTML="<h2 style='margin-top:22px'>प्रश्नवार विश्लेषण</h2><div class='tablewrap'><table><thead><tr><th>Q</th><th>प्रश्न</th><th>सही %</th><th>सही</th><th>गलत</th><th>छोड़ा</th></tr></thead><tbody>"+
+    Q.map((q,j)=>{ let ok=0,wr=0,sk=0; rows.forEach(r=>{ const g=r.a[j]; if(g==null) sk++; else if(g===q.a) ok++; else wr++; });
+      return `<tr><td>${j+1}</td><td>${q.e}</td><td><b>${Math.round(ok/rows.length*100)}%</b></td><td>${ok}</td><td>${wr}</td><td>${sk}</td></tr>`; }).join("")+"</tbody></table></div>";
+});
+$("#backBtn").addEventListener("click", ()=>show("entry"));
+async function openTeacher(){
+  show("teacher"); rows=[]; renderTable(); $("#items").innerHTML="";
+  const m=$("#dbMsg");
+  if(!claudeDb){ m.textContent="स्वतः-save सेवा उपलब्ध नहीं है — Result Codes paste करके मार्क-सूची बनाएँ।"; return; }
+  try{ const snap=await claudeDb.collection("results").get();
+    const got=snap.docs.filter(d=>d.exists).map(d=>d.data()); addRows(got,"auto");
+    m.textContent=got.length?`${got.length} परिणाम स्वतः save मिले।`:"अभी तक कोई स्वतः-save परिणाम नहीं (जो छात्र claude.ai पर login नहीं हैं, उनके परिणाम Result Code से आएँगे)।";
+  }catch(e){ m.textContent="परिणाम पढ़े नहीं जा सके — Result Codes का उपयोग करें।"; }
+}
+const TEACHER_PIN="IPT2026"; // प्राध्यापक का PIN — यहाँ बदला जा सकता है
+function teacherGate(){ if(isOwnerFlag) return openTeacher(); const p=prompt("Professor PIN दर्ज करें:"); if(p===TEACHER_PIN) openTeacher(); else if(p!==null) alert("गलत PIN"); }
+$("#teacherLink").addEventListener("click", teacherGate);
+$("#teacherLink2").addEventListener("click", teacherGate);
+$("#resetBtn").addEventListener("click", ()=>{ if(confirm("इस device पर सुरक्षित परीक्षा-प्रयास मिट जाएगा। आगे बढ़ें?")){ localStorage.removeItem(KEY); state={phase:"entry"}; show("entry"); } });
+let isOwnerFlag=false;
+if(location.hash==="#teacher"){ setTimeout(teacherGate,300); }
+
+// ---------- boot ----------
+if(state.phase==="test") startTest();
+else if(state.phase==="result") renderResult();
+else show("entry");
+$("#teacherLink").classList.remove("hidden"); $("#teacherLink2").classList.remove("hidden");
+
+(async ()=>{
+  if(!window.claude||typeof window.claude.use!=="function") return;
+  try{
+    [claudeUser, claudeDb, claudeDl] = await Promise.all([claude.use("user"), claude.use("db"), claude.use("downloads")]);
+    if(claudeUser && await claudeUser.isOwner()){ isOwnerFlag=true; }
+    if(state.phase==="result" && !state.saved){ persist(); }
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
